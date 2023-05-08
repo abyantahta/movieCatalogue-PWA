@@ -1,0 +1,162 @@
+$lightGreen : #18B0B0;
+$darkGreen : #116979;
+$grey : #DEE3E2;
+$orange : #DE7119;
+$white : #EEEEEE;
+
+@media only screen and (max-width:1080px) {
+  header{
+    padding: 0 3rem;
+  }
+  .jumbotronContainer{
+    .container{
+      .textContent{
+        h1{
+          font-size: 4.5rem;
+          &::first-letter{
+            font-size: 8rem;
+            text-shadow: 2px 2px 2px rgba(252, 252, 252, 0.314);
+          }
+        }
+        h2{
+          margin-top: -10px;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+  .restaurantCatalog{
+    padding-left: 4em;
+    padding-right: 4em;
+    .subHeadingContainer{
+      row-gap: 20px;
+      form{
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .overlay{
+    .popUp{
+      width: 600px;
+      .content{
+        overflow: auto;
+        flex-direction: column;
+        .img{
+          align-self: center;
+          width: 60%;
+          margin-bottom: 10px;
+        }
+        .details{
+          overflow:visible;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width:700px) {
+  header{
+    flex-direction: row-reverse;
+    .hamburger{
+      display: flex;
+    }
+    nav{
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(80px);
+      transform: translateY(-500px);
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: $orange;
+      background: linear-gradient(to bottom,$orange 10%, #e7914a);
+      height: auto;
+      z-index: -1;
+      display: none;
+      transition: .4s .2s;
+      a{
+        width: 100%;
+        padding: 35px;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+      }
+    }
+    .showNav{
+      display: flex;
+      animation: showNavigation .4s cubic-bezier(0.8, -0.7, 0.3, 1);
+      animation-fill-mode: forwards;
+      z-index: -1;
+    }
+    .imgLogo{
+      height: 90%;
+    }
+    
+  }
+  .jumbotronContainer{
+    .container{
+      .textContent{
+        top: 45%;
+        right: 50%;
+        transform: translate(50%,-50%);
+        width: 80%;
+        h1{
+          font-size: 4.5rem;
+          text-align: center;
+          &::first-letter{
+            font-size: 8rem;
+          }
+        }
+        h2{
+          text-align: center;
+          margin-top: -10px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .restaurantCatalog{
+    .subHeadingContainer{
+      row-gap: 10px;
+      flex-direction: column;
+      .subHeading{
+        font-size: 2.1rem;
+      }
+      form{
+        input{
+          font-size: 0.9rem;
+        }
+        width: 300px;
+        border: 2px solid $orange;
+        border-radius: 10px;
+      }
+    }
+    .restaurants{
+      .restaurant-item{
+        overflow: hidden;
+        height: 400px;
+        .imgArea{
+          height: 45%;
+          img{
+            width: 100%;
+            height: auto;
+          }
+          .restaurantLoc{
+            font-size: 1.2rem;
+          }
+        }
+        .descriptionArea{
+          overflow:visible;
+        }
+        padding: 0;
+        width: 80%;
+        border-radius: 10px;
+      }
+    }
+  }
+  .overlay{
+    .popUp{
+      transform: translate(-50%,-50%) scale(0.85);
+    }
+  }
+}
