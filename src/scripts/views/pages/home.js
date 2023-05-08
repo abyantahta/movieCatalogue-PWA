@@ -30,12 +30,16 @@ const Home = {
   async afterRender() {
     // console.log('hai')
     const movies = await RestaurantSource.getList();
+    // console.log(image);
     const restaurants = document.querySelector('.restaurants');
     // console.log(restaurants);
     // console.log('hahaha', movies);
-    movies.forEach((data) => {
-      // const item = createRestaurantItemTemplate(data);
-      restaurants.append(createRestaurantItemTemplate(data));
+    movies.forEach(async (data) => {
+      const item = await createRestaurantItemTemplate(data);
+      restaurants.append(item);
+      // const imageUrl = await RestaurantSource.getImage(data.pictureId);
+      // console.log(imageUrl);
+      // const
     });
   },
 };

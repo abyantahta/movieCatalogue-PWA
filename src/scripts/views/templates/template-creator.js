@@ -1,4 +1,4 @@
-// import config from '../../global/config';
+import config from '../../global/config';
 // import RestaurantSource from '../../data/restaurant-source';
 import starGenerator from '../../utils/star-generator';
 // import RestaurantSource from '../../data/restaurant-source';
@@ -6,14 +6,13 @@ import starGenerator from '../../utils/star-generator';
 const createRestaurantItemTemplate = (data) => {
   const restaurantItem = document.createElement('div');
   restaurantItem.classList.add('restaurant-item');
-
   const stars = starGenerator(data.rating);
-  // const imageUrl = await RestaurantSource.getImage(data.imageId);
-  // console.log(imageUrl)
+  // const imageUrl = await RestaurantSource.getImage(data.pictureId);
+  // console.log(imageUrl);
   const imgArea = document.createElement('div');
   imgArea.classList.add('imgArea');
   imgArea.innerHTML = `
-          <img src="#" alt="Ini adalah foto dari restoran ${data.name}">
+          <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}">
           <h3 class="restaurantLoc">${data.city}</h3>
           `;
   const descriptionArea = document.createElement('div');

@@ -16,13 +16,6 @@ class RestaurantSource {
     const response = await axios.get(API_ENDPOINT.GETDETAIL(id));
     return response.restaurant;
   }
-
-  static async getImage(imageId) {
-    // console.log('pulupulu');
-    const response = await axios.get(API_ENDPOINT.GETIMAGE(imageId));
-    // console.log('pulupulu222');
-    // return response;
-  }
 }
 
 export default RestaurantSource;
