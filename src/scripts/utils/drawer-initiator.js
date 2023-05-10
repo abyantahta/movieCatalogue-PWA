@@ -3,16 +3,15 @@ const DrawerInitiator = {
     button.addEventListener('click', (event) => {
       this._toggleDrawer(event, button, nav);
     });
-    
+
     content.addEventListener('click', (event) => {
       this._closeDrawer(event, nav);
     });
   },
 
   _toggleDrawer(event, button, nav) {
-      event.stopPropagation();
-      console.log(nav)
-      // drawer.classList.toggle('open');
+    event.stopPropagation();
+    console.log(nav);
     button.classList.toggle('transformButton');
     nav.classList.toggle('showNav');
   },

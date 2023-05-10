@@ -36,23 +36,37 @@ $white : #EEEEEE;
     }
   }
 
-  .overlay{
-    .popUp{
-      width: 600px;
-      .content{
-        overflow: auto;
-        flex-direction: column;
-        .img{
-          align-self: center;
-          width: 60%;
-          margin-bottom: 10px;
+      #detailContent{
+        padding: 0 8em;
+        padding-top: 4em;
+        .detailHead{
+          flex-direction: column;
+          // background-color: green;
+          .img{
+            align-self: center;
+            width: 100%;
+            margin-bottom: 10px;
+            img{
+              border-radius: 10px;
+            }
+            .detailButtonArea{
+  
+              margin: 0 auto;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              width: 70%;
+            }
+          }
+          .details{
+            padding: 0;
+            // background-color: blue;
+            overflow:visible;
+          }
         }
-        .details{
-          overflow:visible;
+        .menuAndReviewContainer{
+          flex-direction: column;
         }
       }
-    }
-  }
 }
 @media only screen and (max-width:700px) {
   header{
@@ -154,9 +168,15 @@ $white : #EEEEEE;
       }
     }
   }
-  .overlay{
-    .popUp{
-      transform: translate(-50%,-50%) scale(0.85);
-    }
+  #detailContent{
+    padding: 0 2em;
+    padding-top: 4em;
+      .menu{
+          h3{
+            font-size: 2rem;
+          }
+          flex-direction: column;
+          align-items: center;
+        }
   }
 }

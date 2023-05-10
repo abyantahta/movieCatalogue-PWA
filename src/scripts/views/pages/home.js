@@ -1,5 +1,6 @@
 import RestaurantSource from '../../data/restaurant-source';
-import createRestaurantItemTemplate from '../templates/template-creator';
+// import { createRestaurantItemTemplate } from '../templates/template-creator';
+import '../templates/customelements/restaurant-list';
 
 const Home = {
   async render() {
@@ -21,25 +22,23 @@ const Home = {
           <label for="searchInput" hidden="hidden">Search your Restaurant</label>
         </form>
       </div>
-      <div class="restaurants">
-      </div>
+      <restaurant-list class="restaurants">
+      </restaurant-list>
     </section>
     `;
   },
 
   async afterRender() {
-    // console.log('hai')
-    const movies = await RestaurantSource.getList();
-    // console.log(image);
-    const restaurants = document.querySelector('.restaurants');
-    // console.log(restaurants);
-    // console.log('hahaha', movies);
-    movies.forEach(async (data) => {
-      const item = await createRestaurantItemTemplate(data);
-      restaurants.append(item);
-      // const imageUrl = await RestaurantSource.getImage(data.pictureId);
-      // console.log(imageUrl);
-      // const
+    const restaurantList = await RestaurantSource.getList();
+    const restaurants = document.querySelector('restaurant-list');
+    restaurants.restaurants = restaurantList;
+
+    const inputFilter = document.querySelector('#searchInput');
+    inputFilter.addEventListener('input', async (e) => {
+      e.preventDefault();
+      restaurants.innerHTML = '';
+      const filteredData = await RestaurantSource.filterRestaurant(inputFilter.value);
+      restaurants.restaurants = filteredData;
     });
   },
 };

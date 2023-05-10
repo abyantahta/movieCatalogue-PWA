@@ -12,9 +12,24 @@ class RestaurantSource {
     return data;
   }
 
-  static async detailRestaurant(id) {
+  static async getDetail(id) {
     const response = await axios.get(API_ENDPOINT.GETDETAIL(id));
-    return response.restaurant;
+    const data = response.data.restaurant;
+    return data;
+  }
+
+  static async filterRestaurant(query) {
+    const response = await axios.get(API_ENDPOINT.FILTERDATA(query));
+    const lists = response.data.restaurants;
+    // console.log(lists);
+    return lists;
+  }
+
+  static async sendReviewData(data) {
+    const response = await axios.post(API_ENDPOINT.SENDREVIEW, data, {
+      headers: { 'Content-Type': 'application/json' },
+    });
+    console.log(response);
   }
 }
 
