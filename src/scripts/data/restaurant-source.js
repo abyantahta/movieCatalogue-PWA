@@ -21,7 +21,6 @@ class RestaurantSource {
   static async filterRestaurant(query) {
     const response = await axios.get(API_ENDPOINT.FILTERDATA(query));
     const lists = response.data.restaurants;
-    // console.log(lists);
     return lists;
   }
 

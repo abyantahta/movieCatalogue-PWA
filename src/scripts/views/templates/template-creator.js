@@ -109,4 +109,16 @@ const detailTemplate = (data) => {
   return detail;
 };
 
-export default detailTemplate;
+const addReview = () => `
+  <div class="inputArea">
+    <input type="text" id="nameReviewer" placeholder="Name..." />
+    <label htmlFor="nameReviewer" hidden="hidden">Name</label>
+    <input type="text" id="reviewText" placeholder="Put Review Here..."/>
+    <label htmlFor="reviewText" hidden="hidden">Text</label >
+  </div>
+  <button class="sendReviewButton">POST</button>
+`;
+export {
+  detailTemplate,
+  addReview,
+};

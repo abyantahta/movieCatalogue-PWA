@@ -37,8 +37,16 @@ const Home = {
     inputFilter.addEventListener('input', async (e) => {
       e.preventDefault();
       restaurants.innerHTML = '';
+      // console.log(restaurantList.length);
       const filteredData = await RestaurantSource.filterRestaurant(inputFilter.value);
-      restaurants.restaurants = filteredData;
+      if (filteredData.length !== 0) {
+        restaurants.restaurants = filteredData;
+      } else {
+        console.log(restaurants);
+        restaurants.innerHTML = `
+        <h3 class="notFound">Restaurant tidak ditemukan</h3>
+        `;
+      }
     });
   },
 };

@@ -9,14 +9,14 @@ class RestaurantList extends HTMLElement {
 
   // eslint-disable-next-line class-methods-use-this
   render() {
-    console.log('hai');
+    // console.log('hai');
     this._restaurants.forEach((restaurant) => {
       const restaurantItemElement = document.createElement('restaurant-item');
       restaurantItemElement.restaurant = restaurant;
       this.appendChild(restaurantItemElement);
-      console.log(restaurant);
+      // console.log(restaurant);
     });
-    console.log(this._restaurants);
+    // console.log(this._restaurants);
   }
 }
 customElements.define('restaurant-list', RestaurantList);

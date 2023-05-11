@@ -4,6 +4,7 @@ import '../styles/style.scss';
 import '../styles/responsive.scss';
 
 import App from './views/app';
+import loaderInitiator from './utils/loader-initiator';
 
 // const ham = document.querySelector('.hamburger');
 // console.log(ham);
@@ -20,4 +21,5 @@ window.addEventListener('hashchange', () => {
 });
 window.addEventListener('load', () => {
   app.renderPage();
+  loaderInitiator();
 });

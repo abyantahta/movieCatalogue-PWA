@@ -1,5 +1,7 @@
 // import './review-item';
 import './review-item';
+// eslint-disable-next-line import/no-cycle
+import { addReview } from '../template-creator';
 
 class ReviewList extends HTMLElement {
   set reviews(reviews) {
@@ -15,7 +17,10 @@ class ReviewList extends HTMLElement {
       this.appendChild(reviewItemElement);
       console.log(review);
     });
-    console.log(this._reviews);
+    const form = document.createElement('form');
+    form.innerHTML = addReview();
+    console.log(form);
+    this.appendChild(form);
   }
 }
 customElements.define('review-list', ReviewList);
