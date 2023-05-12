@@ -5,9 +5,8 @@ import '../styles/responsive.scss';
 
 import App from './views/app';
 import loaderInitiator from './utils/loader-initiator';
+import swRegister from './utils/sw-register';
 
-// const ham = document.querySelector('.hamburger');
-// console.log(ham);
 // eslint-disable-next-line no-unused-vars
 const app = new App({
   button: document.querySelector('.hamburger'),
@@ -21,5 +20,6 @@ window.addEventListener('hashchange', () => {
 });
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
   loaderInitiator();
 });
