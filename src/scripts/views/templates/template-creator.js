@@ -70,7 +70,7 @@ const detailTemplate = (data) => {
             <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}">
             <div class="detailButtonArea">
               <a href="">Back to Home</a>
-              <button class='addToFavorite'>Save Restaurant</button>
+              <button class='removeFromFavorite'>Save Restaurant</button>
             </div>
         </div>
         <div class="details">

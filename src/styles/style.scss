@@ -380,8 +380,8 @@ footer{
           align-items: center;
           justify-content: center;
           width: 50%;
-          border-top-left-radius: 30%;
-          border-bottom-left-radius: 30%;
+          border-top-left-radius: 30px;
+          border-bottom-left-radius: 30px;
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
           font-size: inherit;
@@ -390,8 +390,27 @@ footer{
         .addToFavorite{
           width: 50%;
           font-size: inherit;
-          border-top-right-radius: 30%;
-          border-bottom-right-radius: 30%;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+        .removeFromFavorite{
+          outline: none;
+          background-color: $darkGreen;
+          border: none;
+          cursor: pointer;
+          font-weight: 600;
+          color: $darkGreen;
+          color: white;
+          &:hover{
+            background-color: $lightGreen;
+            color: white;
+          }
+          width: 50%;
+          font-size: inherit;
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
         }
