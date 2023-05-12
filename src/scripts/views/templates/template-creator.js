@@ -69,8 +69,9 @@ const detailTemplate = (data) => {
         <div class="img">
             <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}">
             <div class="detailButtonArea">
-              <a href="">Back to Home</a>
-              <button class='removeFromFavorite'>Save Restaurant</button>
+              <a href="./">Back to Home</a>
+              <div class="likeOrLikedButton">
+              </div>
             </div>
         </div>
         <div class="details">
@@ -108,6 +109,14 @@ const detailTemplate = (data) => {
       `;
   return detail;
 };
+const createLikedButtonTemplate = () => `
+  <button class='removeFromFavorite'>Saved</button>
+
+`;
+const createLikeButtonTemplate = () => `
+  <button class='addToFavorite'>Save Restaurant</button>
+
+`;
 
 const addReview = () => `
   <div class="inputArea">
@@ -121,4 +130,6 @@ const addReview = () => `
 export {
   detailTemplate,
   addReview,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };

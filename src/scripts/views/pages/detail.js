@@ -1,6 +1,7 @@
 import RestaurantSource from '../../data/restaurant-source';
 import UrlParser from '../../routes/url-parser';
 import getReview from '../../utils/get-review';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 import { detailTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -18,9 +19,7 @@ const Detail = {
     detailContent.innerHTML = detailTemplate(response);
 
     const sendReviewButton = document.querySelector('.sendReviewButton');
-    console.log(sendReviewButton);
     sendReviewButton.addEventListener('click', async () => {
-      // console.log('hai');
       const data = getReview();
       data.id = response.id;
       console.log(data);
@@ -28,6 +27,14 @@ const Detail = {
       const sendReview = await RestaurantSource.sendReviewData(data);
       window.location.reload();
     });
+    console.log('hai');
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('.likeOrLikedButton'),
+      restaurant: response,
+    });
+
+
+    // console.log(likeButtonContainer);
   },
 };
 
