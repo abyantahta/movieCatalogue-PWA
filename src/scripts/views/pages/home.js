@@ -1,5 +1,4 @@
 import RestaurantSource from '../../data/restaurant-source';
-// import { createRestaurantItemTemplate } from '../templates/template-creator';
 import '../templates/customelements/restaurant-list';
 
 const Home = {
@@ -37,7 +36,6 @@ const Home = {
     inputFilter.addEventListener('input', async (e) => {
       e.preventDefault();
       restaurants.innerHTML = '';
-      // console.log(restaurantList.length);
       const filteredData = await RestaurantSource.filterRestaurant(inputFilter.value);
       if (filteredData.length !== 0) {
         restaurants.restaurants = filteredData;

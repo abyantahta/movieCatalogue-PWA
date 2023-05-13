@@ -41,7 +41,6 @@ $white : #EEEEEE;
         padding-top: 4em;
         .detailHead{
           flex-direction: column;
-          // background-color: green;
           .img{
             align-self: center;
             width: 100%;
@@ -59,7 +58,6 @@ $white : #EEEEEE;
           }
           .details{
             padding: 0;
-            // background-color: blue;
             overflow:visible;
           }
         }
@@ -145,7 +143,8 @@ $white : #EEEEEE;
         border-radius: 10px;
       }
     }
-    .restaurants{
+    restaurant-list{
+      align-items: center;
       .restaurant-item{
         overflow: hidden;
         height: 400px;

@@ -25,14 +25,12 @@ const Detail = {
       console.log(data);
       // eslint-disable-next-line no-unused-vars
       const sendReview = await RestaurantSource.sendReviewData(data);
-      window.location.reload();
     });
     console.log('hai');
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('.likeOrLikedButton'),
       restaurant: response,
     });
-
 
     // console.log(likeButtonContainer);
   },
