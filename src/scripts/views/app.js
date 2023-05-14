@@ -10,7 +10,6 @@ class App {
     this._drawer = drawer;
     this._content = content;
     this._nav = nav;
-    // console.log(`hai ${button}`);
     this._initialAppShell();
   }
 
@@ -26,10 +25,13 @@ class App {
   }
 
   async renderPage() {
-    const url = UrlParser.parseActiveUrlWithCombiner();
-    // console.log(url);
+    let url = UrlParser.parseActiveUrlWithCombiner();
+    console.log(url);
+    if (!(url in routes)) {
+      window.location.hash = '#/404';
+      url = UrlParser.parseActiveUrlWithCombiner();
+    }
     const page = routes[url];
-    // console.log(url);
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }

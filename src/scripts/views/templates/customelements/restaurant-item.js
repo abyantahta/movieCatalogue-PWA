@@ -1,5 +1,3 @@
-// import './review-list';
-
 import config from '../../../global/config';
 import starGenerator from '../../../utils/star-generator';
 
@@ -12,7 +10,6 @@ class RestaurantItem extends HTMLElement {
   // eslint-disable-next-line class-methods-use-this
   render() {
     this.innerHTML = `
-    <div class="restaurant-item">
         <div class="imgArea">
         <img src="${config.UrlImage}/${this._restaurant.pictureId}" alt="Foto restoran" />
         <h3 class="restaurantLoc">${this._restaurant.city}</h3>
@@ -26,9 +23,8 @@ class RestaurantItem extends HTMLElement {
             <h3 class="rating" aria-label="rating"> (${this._restaurant.rating})</h3>
         </div>
         <h3 class="description">${this._restaurant.description}</h3>
-        <a href="/#/detail/${this._restaurant.id}" class="detailsButton">Detail</a>
+        <a href="/#/detail/${this._restaurant.id}" class="detailsButton" tabindex='0'>Detail</a>
         </div>
-    </div>
     `;
   }
 }

@@ -14,7 +14,7 @@ const Home = {
     </section>
     <section class="restaurantCatalog" id="mainContent">
       <div class="subHeadingContainer">
-        <h2 class="subHeading">Find Your <span>Restaurant</span></h2>
+        <h2 class="subHeading" tabindex='0'>Find Your <span>Restaurant</span></h2>
         <form action="">
           <iconify-icon icon="ic:baseline-search"></iconify-icon>
           <input type="text" id="searchInput" placeholder="Search Restaurants Here...">
@@ -40,7 +40,6 @@ const Home = {
       if (filteredData.length !== 0) {
         restaurants.restaurants = filteredData;
       } else {
-        console.log(restaurants);
         restaurants.innerHTML = `
         <h3 class="notFound">Restaurant tidak ditemukan</h3>
         `;

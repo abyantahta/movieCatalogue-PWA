@@ -4,7 +4,7 @@ const Favorites = {
   async render() {
     return `
       <div id="favorites">
-        <h2 class="subHeading">Your Favorite <span>Restaurant</span></h2>  
+        <h2 class="subHeading" tabindex='0'>Your Favorite <span>Restaurant</span></h2>  
         <restaurant-list class="restaurants">
         </restaurant-list>
       </div>

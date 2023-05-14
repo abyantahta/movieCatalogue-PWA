@@ -25,7 +25,7 @@ $white : #EEEEEE;
       }
     }
   }
-  .restaurantCatalog{
+  .restaurantCatalog, #favorites{
     padding-left: 4em;
     padding-right: 4em;
     .subHeadingContainer{
@@ -143,28 +143,34 @@ $white : #EEEEEE;
         border-radius: 10px;
       }
     }
-    restaurant-list{
-      align-items: center;
-      .restaurant-item{
-        overflow: hidden;
-        height: 400px;
-        .imgArea{
-          height: 45%;
-          img{
-            width: 100%;
-            height: auto;
-          }
-          .restaurantLoc{
-            font-size: 1.2rem;
-          }
+  }
+  restaurant-list{
+    justify-content: center;
+    // background-color: red;
+    // align-items: center;
+    restaurant-item{
+      // background-color: green;
+      overflow: hidden;
+      // width: 100px;
+      height: 400px;
+      .imgArea{
+        width: 100%;
+        height: 45%;
+        img{
+          width: 100%;
+          height: auto;
         }
-        .descriptionArea{
-          overflow:visible;
+        .restaurantLoc{
+          font-size: 1.2rem;
         }
-        padding: 0;
-        width: 80%;
-        border-radius: 10px;
       }
+      .descriptionArea{
+        width: 100%;
+        overflow:visible;
+      }
+      padding: 0;
+      width: 80%;
+      border-radius: 10px;
     }
   }
   #detailContent{
@@ -178,4 +184,16 @@ $white : #EEEEEE;
           align-items: center;
         }
   }
+  .notFoundContainer{
+  h2{
+    font-size: 8rem;
+    font-weight: 800;
+    color: $darkGreen;
+    text-shadow: 2px 2px 5px black;
+  }
+  h4{
+    font-size: 1rem;
+    color: $orange;
+  }
+}
 }

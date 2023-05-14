@@ -4,7 +4,7 @@ import '../styles/style.scss';
 import '../styles/responsive.scss';
 
 import App from './views/app';
-import loaderInitiator from './utils/loader-initiator';
+// import loaderInitiator from './utils/loader-initiator';
 import swRegister from './utils/sw-register';
 
 // eslint-disable-next-line no-unused-vars
@@ -21,5 +21,5 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
-  loaderInitiator();
+  // loaderInitiator();
 });

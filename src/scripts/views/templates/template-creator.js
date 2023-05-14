@@ -5,7 +5,7 @@ import starGenerator from '../../utils/star-generator';
 const showArrayData = (datas) => {
   let dataList = '';
   datas.forEach((data) => {
-    dataList += `<li>${data.name}</li>`;
+    dataList += `<li tabindex='0'>${data.name}</li>`;
   });
   return dataList;
 };
@@ -16,9 +16,9 @@ const detailTemplate = (data) => {
   const detail = `
       <div class="detailHead">
         <div class="img">
-            <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}">
+            <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}" tabindex='0'>
             <div class="detailButtonArea">
-              <a href="./">Back to Home</a>
+              <a href="./" tabindex='0' aria-label="Back to home">Back to Home</a>
               <div class="likeOrLikedButton">
               </div>
             </div>
@@ -38,20 +38,20 @@ const detailTemplate = (data) => {
       <div class="menuAndReviewContainer">
         <div class="menu">
           <div class="foods">
-            <h3>Foods</h3>
-            <ul>
+            <h3 tabindex='0'>Foods</h3>
+            <ul tabindex='0'>
               ${showArrayData(data.menus.foods)}
             </ul>
           </div>
-          <div class="drinks">
-            <h3>Drinks</h3>
+          <div class="drinks" tabindex='0'>
+            <h3 tabindex='0'>Drinks</h3>
             <ul>
               ${showArrayData(data.menus.drinks)}
             </ul>
           </div>
         </div>
         <div class="reviewContainer">
-          <h2>Review</h2>
+          <h2 tabindex='0'>Review</h2>
           ${reviewString}
         </div>
       </div>

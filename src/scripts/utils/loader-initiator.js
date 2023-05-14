@@ -1,5 +1,13 @@
-const loaderInitiator = () => {
-  const overlay = document.querySelector('.overlay');
-  overlay.style.display = 'none';
+const showLoader = () => {
+  const loader = document.querySelector('.overlay');
+  loader.style.display = 'flex';
 };
-export default loaderInitiator;
+const hideLoader = () => {
+  const loader = document.querySelector('.overlay');
+  loader.style.display = 'none';
+};
+
+export {
+  showLoader,
+  hideLoader,
+};
