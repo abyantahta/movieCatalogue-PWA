@@ -39,7 +39,7 @@ const detailTemplate = (data) => {
         <div class="menu">
           <div class="foods">
             <h3 tabindex='0'>Foods</h3>
-            <ul tabindex='0'>
+            <ul>
               ${showArrayData(data.menus.foods)}
             </ul>
           </div>
