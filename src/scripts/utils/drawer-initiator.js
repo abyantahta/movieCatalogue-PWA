@@ -11,7 +11,6 @@ const DrawerInitiator = {
 
   _toggleDrawer(event, button, nav) {
     event.stopPropagation();
-    console.log(nav);
     button.classList.toggle('transformButton');
     nav.classList.toggle('showNav');
   },

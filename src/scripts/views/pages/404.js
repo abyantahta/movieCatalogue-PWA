@@ -4,7 +4,7 @@
 // import LikeButtonInitiator from '../../utils/like-button-initiator';
 // import { detailTemplate } from '../templates/template-creator';
 
-import { hideLoader } from "../../utils/loader-initiator";
+import { hideLoader } from '../../utils/loader-initiator';
 
 const NotFound = {
   async render() {
@@ -15,7 +15,6 @@ const NotFound = {
         </div>
     `;
   },
-
   // eslint-disable-next-line no-empty-function
   async afterRender() {
     hideLoader();

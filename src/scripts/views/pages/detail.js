@@ -22,17 +22,13 @@ const Detail = {
     sendReviewButton.addEventListener('click', async () => {
       const data = getReview();
       data.id = response.id;
-      console.log(data);
       // eslint-disable-next-line no-unused-vars
       const sendReview = await RestaurantSource.sendReviewData(data);
     });
-    console.log('hai');
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('.likeOrLikedButton'),
       restaurant: response,
     });
-
-    // console.log(likeButtonContainer);
   },
 };
 

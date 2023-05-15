@@ -11,7 +11,7 @@ class RestaurantItem extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="imgArea">
-        <img src="${config.UrlImage}/${this._restaurant.pictureId}" alt="Foto restoran" />
+        <img crossorigin="anonymous" src="${config.UrlImage}/${this._restaurant.pictureId}" alt="Foto restoran" />
         <h3 class="restaurantLoc">${this._restaurant.city}</h3>
         </div>
         <div class="descriptionArea">

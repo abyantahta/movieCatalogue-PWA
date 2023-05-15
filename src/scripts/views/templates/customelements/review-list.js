@@ -15,11 +15,9 @@ class ReviewList extends HTMLElement {
       const reviewItemElement = document.createElement('review-item');
       reviewItemElement.review = review;
       this.appendChild(reviewItemElement);
-      console.log(review);
     });
     const form = document.createElement('form');
     form.innerHTML = addReview();
-    console.log(form);
     this.appendChild(form);
   }
 }

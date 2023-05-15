@@ -1,4 +1,5 @@
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+import { hideLoader } from '../../utils/loader-initiator';
 
 const Favorites = {
   async render() {
@@ -16,6 +17,7 @@ const Favorites = {
     const restaurantList = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurants = document.querySelector('restaurant-list');
     restaurants.restaurants = restaurantList;
+    hideLoader();
   },
 };
 

@@ -26,7 +26,6 @@ class App {
 
   async renderPage() {
     let url = UrlParser.parseActiveUrlWithCombiner();
-    console.log(url);
     if (!(url in routes)) {
       window.location.hash = '#/404';
       url = UrlParser.parseActiveUrlWithCombiner();

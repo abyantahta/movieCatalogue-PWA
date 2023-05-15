@@ -1,4 +1,6 @@
 import RestaurantSource from '../../data/restaurant-source';
+import { hideLoader } from '../../utils/loader-initiator';
+import searchHandler from '../../utils/search-handler';
 import '../templates/customelements/restaurant-list';
 
 const Home = {
@@ -32,19 +34,8 @@ const Home = {
     const restaurants = document.querySelector('restaurant-list');
     restaurants.restaurants = restaurantList;
 
-    const inputFilter = document.querySelector('#searchInput');
-    inputFilter.addEventListener('input', async (e) => {
-      e.preventDefault();
-      restaurants.innerHTML = '';
-      const filteredData = await RestaurantSource.filterRestaurant(inputFilter.value);
-      if (filteredData.length !== 0) {
-        restaurants.restaurants = filteredData;
-      } else {
-        restaurants.innerHTML = `
-        <h3 class="notFound">Restaurant tidak ditemukan</h3>
-        `;
-      }
-    });
+    searchHandler(restaurants);
+    hideLoader();
   },
 };
 

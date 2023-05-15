@@ -16,7 +16,7 @@ const detailTemplate = (data) => {
   const detail = `
       <div class="detailHead">
         <div class="img">
-            <img src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}" tabindex='0'>
+            <img crossorigin="anonymous" src="${config.UrlImage}/${data.pictureId}" alt="Ini adalah foto dari restoran ${data.name}" tabindex='0'>
             <div class="detailButtonArea">
               <a href="./" tabindex='0' aria-label="Back to home">Back to Home</a>
               <div class="likeOrLikedButton">
