@@ -58,11 +58,11 @@ const detailTemplate = (data) => {
       `;
   return detail;
 };
-const createLikedButtonTemplate = () => `
+const createLikedRestaurantButtonTemplate = () => `
   <button class='removeFromFavorite'>Saved</button>
 
 `;
-const createLikeButtonTemplate = () => `
+const createLikeRestaurantButtonTemplate = () => `
   <button class='addToFavorite'>Save Restaurant</button>
 `;
 
@@ -78,6 +78,6 @@ const addReview = () => `
 export {
   detailTemplate,
   addReview,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createLikedRestaurantButtonTemplate,
 };
