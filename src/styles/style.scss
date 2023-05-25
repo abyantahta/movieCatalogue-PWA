@@ -160,34 +160,37 @@ gap: 8px;
   height: 88vh;
   .container{
     color: white;
-    background: url('../public/heros/hero-image_4.jpg');
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
     position: fixed;
     z-index: -1;
     width: 100%;
     height: 100%;
-
-    .textContent{
-      position: fixed;
-      top: 40%;
-      right: 8%;
-      text-align: end;
-      h1{
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.314);
-        font-size: 6rem;
-        font-style: italic;
-        &:first-letter{
-          color: #116979;
-          font-size: 9rem;
-          text-shadow: 2px 2px 10px rgba(243, 243, 243, 0.579);
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .textContent{
+    // background-color: black;
+    z-index: -1;
+    color: white;
+    position: fixed;
+    top: 40%;
+    right: 8%;
+    text-align: end;
+    h1{
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.314);
+      font-size: 6rem;
+      font-style: italic;
+      &:first-letter{
+        color: #116979;
+        font-size: 9rem;
+        text-shadow: 2px 2px 10px rgba(243, 243, 243, 0.579);
       }
-      h2{
-        font-weight: 400;
-        font-size: 2.3rem;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.458);
-      }
+    }
+    h2{
+      font-weight: 400;
+      font-size: 2.3rem;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.458);
     }
   }
 }

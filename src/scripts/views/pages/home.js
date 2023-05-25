@@ -7,11 +7,13 @@ const Home = {
   async render() {
     return `
     <section class="jumbotronContainer">
-      <div class="container">
-        <div class="textContent">
-          <h1>Hungers</h1>
-          <h2>Find a place to overcome your hunger</h3>
-        </div>
+      <picture>
+        <source media="(max-width: 700px)" srcset="./images/heros/hero-image_4-small.jpg">
+        <img src="./images/heros/hero-image_4-large.jpg" class="container">
+      </picture>
+      <div class="textContent">
+        <h1>Hungers</h1>
+        <h2>Find a place to overcome your hunger</h3>
       </div>
     </section>
     <section class="restaurantCatalog" id="mainContent">
