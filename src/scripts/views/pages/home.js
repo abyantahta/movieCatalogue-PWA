@@ -9,7 +9,7 @@ const Home = {
     <section class="jumbotronContainer">
       <picture>
         <source media="(max-width: 700px)" srcset="./images/heros/hero-image_4-small.jpg">
-        <img src="./images/heros/hero-image_4-large.jpg" class="container">
+        <img src="./images/heros/hero-image_4-large.jpg" class="container" alt="hero image">
       </picture>
       <div class="textContent">
         <h1>Hungers</h1>

@@ -1,5 +1,6 @@
 import config from '../../../global/config';
 import starGenerator from '../../../utils/star-generator';
+import 'lazysizes';
 
 class RestaurantItem extends HTMLElement {
   set restaurant(restaurant) {
@@ -11,7 +12,7 @@ class RestaurantItem extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="imgArea">
-        <img crossorigin="anonymous" src="${config.UrlImage}/${this._restaurant.pictureId}" alt="Foto restoran" />
+        <img class='lazyload' crossorigin="anonymous" src="${config.UrlImage}/${this._restaurant.pictureId}" alt="Foto restoran" />
         <h3 class="restaurantLoc">${this._restaurant.city}</h3>
         </div>
         <div class="descriptionArea">
